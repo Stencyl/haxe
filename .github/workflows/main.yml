@@ -748,6 +748,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -ex
-          mv linuxBinaries/*_bin.tar.gz haxe-${{ inputs.version }}-linux64.tar.gz && gh release upload ${{ inputs.version }} haxe-${{ inputs.version }}-linux64.tar.gz
-          mv macBinaries/*_bin.tar.gz   haxe-${{ inputs.version }}-osx.tar.gz     && gh release upload ${{ inputs.version }} haxe-${{ inputs.version }}-osx.tar.gz
-          mv win64Binaries/*_bin.zip    haxe-${{ inputs.version }}-win64.zip      && gh release upload ${{ inputs.version }} haxe-${{ inputs.version }}-win64.zip
+          mv linuxBinaries/*_bin.tar.gz haxe-${{ inputs.version }}-linux64.tar.gz && gh release upload ${{ inputs.version }} haxe-${{ inputs.version }}-linux64.tar.gz --repo Stencyl/haxe
+          mv macBinaries/*_bin.tar.gz   haxe-${{ inputs.version }}-osx.tar.gz     && gh release upload ${{ inputs.version }} haxe-${{ inputs.version }}-osx.tar.gz     --repo Stencyl/haxe
+          mv win64Binaries/*_bin.zip    haxe-${{ inputs.version }}-win64.zip      && gh release upload ${{ inputs.version }} haxe-${{ inputs.version }}-win64.zip      --repo Stencyl/haxe
