@@ -379,7 +379,7 @@ jobs:
           haxelib git hxtemplo https://github.com/Simn/hxtemplo.git
           haxelib git hxargs https://github.com/Simn/hxargs.git
           haxelib git markdown https://github.com/dpeek/haxe-markdown.git
-          haxelib git hxcpp https://github.com/HaxeFoundation/hxcpp.git
+          haxelib git hxcpp https://github.com/HaxeFoundation/hxcpp.git 86d4b1a07ddadf162a0c48487f1e1b17d7bbcd64
           cd $(haxelib libpath hxcpp)/tools/hxcpp
           haxe compile.hxml
           cd -

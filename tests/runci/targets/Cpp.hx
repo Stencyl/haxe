@@ -27,7 +27,7 @@ class Cpp {
 			final path = getHaxelibPath("hxcpp");
 			infoMsg('hxcpp has already been installed in $path.');
 		} catch(e:Dynamic) {
-			haxelibInstallGit("HaxeFoundation", "hxcpp", true);
+			haxelibInstallGit("HaxeFoundation", "hxcpp", "86d4b1a07ddadf162a0c48487f1e1b17d7bbcd64", "--always", true);
 			final oldDir = Sys.getCwd();
 			changeDirectory(getHaxelibPath("hxcpp") + "tools/hxcpp/");
 			runCommand("haxe", ["-D", "source-header=''", "compile.hxml"]);

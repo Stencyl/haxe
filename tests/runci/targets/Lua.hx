@@ -55,7 +55,7 @@ class Lua {
 			if (systemName == "Mac" && lv.startsWith("-j")) continue;
 			Sys.println('--------------------');
 			Sys.println('Lua Version: $lv');
-			runCommand("hererocks", [envpath, lv, "-rlatest", "-i"]);
+			runCommand("hererocks", [envpath, lv, "-r@v3.13.0", "-i"]);
 			trace('path: ' + Sys.getEnv("PATH"));
 
 
