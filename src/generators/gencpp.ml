@@ -8662,7 +8662,7 @@ let generate_source ctx =
          | "true" | "sys" | "dce" | "cpp" | "debug" -> ();
          | _ -> cmd := !cmd @ [Printf.sprintf "-D%s=\"%s\"" name (escape_command value)];
       ) common_ctx.defines.values;
-      List.iter (fun path -> cmd := !cmd @ [Printf.sprintf "-I%s" (escape_command path)]) common_ctx.class_path;
+      List.iter (fun path -> cmd := !cmd @ [Printf.sprintf "-I\"%s\"" (escape_command path)]) common_ctx.class_path;
       common_ctx.print ("haxelib " ^ (String.concat " " !cmd) ^ "\n");
       if common_ctx.run_command_args "haxelib" !cmd <> 0 then failwith "Build failed";
       Sys.chdir old_dir;
