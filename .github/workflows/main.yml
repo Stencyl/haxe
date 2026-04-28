@@ -701,6 +701,12 @@ jobs:
         if: matrix.BREW_PACKAGES
         run: brew install ${{matrix.BREW_PACKAGES}}
 
+      - name: Set java version
+        if: matrix.target == 'java,jvm'
+        run: |
+          echo "JAVA_HOME=$JAVA_HOME_11_X64" >> $GITHUB_ENV
+          echo "$JAVA_HOME_11_X64/bin" >> $GITHUB_PATH
+
       - name: Test
         run: |
           # disable invalid Unicode filenames on APFS
